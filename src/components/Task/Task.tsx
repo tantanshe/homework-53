@@ -1,14 +1,16 @@
 import React from 'react';
 
 interface TaskProps {
-    id: string;
+  task: {
+    id: number;
     text: string;
+  };
 }
 
-const Task: React.FC<TaskProps> = ( {text} ) => {
+const Task: React.FC<TaskProps> = ( {task} ) => {
   return (
     <div>
-      <span>{text}</span>
+      <span>{task.text}</span>
       <button>Удалить</button>
     </div>
   );
