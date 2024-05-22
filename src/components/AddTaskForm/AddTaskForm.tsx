@@ -2,16 +2,17 @@ import React from 'react';
 
 interface AddTaskFormProps {
   taskText: string;
-  setTaskText: React.Dispatch<React.SetStateAction<string>>;
-
+  onTaskTextChange: (text: string) => void;
+  onAddTask: () => void;
 }
 
-const AddTaskForm: React.FC<AddTaskFormProps> = ({taskText, setTaskText}) => {
+const AddTaskForm: React.FC<AddTaskFormProps> = ({taskText, onTaskTextChange, onAddTask}) => {
   return (
-    <div>
-      <input type="text" value={taskText} onChange={(e) => setTaskText(e.target.value)}
+    <div className="add-task-form">
+      <input type="text" value={taskText} onChange={(e) => onTaskTextChange(e.target.value)}
+             className="add-task-input"
       />
-      <button>Add</button>
+      <button className="add-task-button" onClick={onAddTask}>Add</button>
     </div>
   );
 };

@@ -5,4 +5,44 @@
   text-align: center;
 }
 
+.task {
+  background-color: #f1f3f5;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #004646;
+}
 
+.add-task-form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.add-task-input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  margin-right: 10px;
+}
+
+.add-task-button {
+  padding: 10px 20px;
+  background-color: #95d1d1;
+  color: #004646;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-task-button {
+  padding: 6px 12px;
+  background-color: #d7a2a5;
+  color: #004646;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

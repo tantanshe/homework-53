@@ -2,16 +2,17 @@ import React from 'react';
 
 interface TaskProps {
   task: {
-    id: number;
+    id: string;
     text: string;
   };
+  onRemoveTask: (taskId: string) => void;
 }
 
-const Task: React.FC<TaskProps> = ( {task} ) => {
+const Task: React.FC<TaskProps> = ( {task, onRemoveTask} ) => {
   return (
-    <div>
+    <div className="task">
       <span>{task.text}</span>
-      <button>Удалить</button>
+      <button className="remove-task-button" onClick={() => onRemoveTask(task.id)}>Remove</button>
     </div>
   );
 };
